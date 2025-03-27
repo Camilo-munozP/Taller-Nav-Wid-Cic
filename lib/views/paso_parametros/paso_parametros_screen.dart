@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:go_router/go_router.dart'; // Importa tu Drawer personalizado
+import 'package:taller_nav/views/base_view.dart';
+import 'package:taller_nav/views/custom_drawer.dart';
 
 class PasoParametrosScreen extends StatefulWidget {
   const PasoParametrosScreen({super.key});
@@ -38,6 +40,7 @@ class _PasoParametrosScreenState extends State<PasoParametrosScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Paso de Parámetros')),
+      drawer: const CustomDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

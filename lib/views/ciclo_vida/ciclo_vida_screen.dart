@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:taller_nav/views/custom_drawer.dart';
 
 class CicloVidaScreen extends StatefulWidget {
   const CicloVidaScreen({super.key});
@@ -35,6 +36,7 @@ class _CicloVidaScreenState extends State<CicloVidaScreen> {
 
     return Scaffold(
       appBar: AppBar(title: const Text("Ciclo de Vida de un StatefulWidget")),
+      drawer: const CustomDrawer(), //
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

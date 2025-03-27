@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'custom_drawer.dart'; // Importa tu Drawer personalizado
 
 class GridTabView extends StatelessWidget {
   const GridTabView({super.key});
@@ -17,6 +18,7 @@ class GridTabView extends StatelessWidget {
             ],
           ),
         ),
+        drawer: const CustomDrawer(),
         body: const TabBarView(
           children: [GridViewExample(), ListViewExample()],
         ),
@@ -67,10 +69,7 @@ class ListViewExample extends StatelessWidget {
       itemBuilder: (context, index) {
         return Card(
           margin: const EdgeInsets.symmetric(vertical: 5),
-          child: ListTile(
-            //leading: const Icon(Icons.star),
-            title: Text('Elemento ${index + 1}'),
-          ),
+          child: ListTile(title: Text('Elemento ${index + 1}')),
         );
       },
     );

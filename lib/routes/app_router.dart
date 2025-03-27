@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:taller_nav/views/Timer/timer_view.dart';
 import 'package:taller_nav/views/ciclo_vida/ciclo_vida_screen.dart';
 import 'package:taller_nav/views/home_view.dart';
 import 'package:taller_nav/views/paso_parametros/detalle_screen.dart';
 import 'package:taller_nav/views/paso_parametros/paso_parametros_screen.dart';
 import 'package:taller_nav/views/grid_tab_view.dart';
+import 'package:taller_nav/views/lista_estudiantes/lista_estudiantes_screen.dart';
+import 'package:taller_nav/views/isolate/isolate_view.dart';
+//import 'package:taller_nav/views/timer/timer_view.dart';
 
 final GoRouter appRouter = GoRouter(
   routes: [
@@ -29,5 +33,13 @@ final GoRouter appRouter = GoRouter(
       path: '/grid_tab',
       builder: (context, state) => const GridTabView(),
     ),
+
+    GoRoute(
+      path: '/lista_estudiantes',
+      builder: (context, state) => const ListaEstudiantesScreen(),
+    ),
+    GoRoute(path: '/timer', builder: (context, state) => const TimerView()),
+
+    GoRoute(path: '/isolate', builder: (context, state) => const IsolateView()),
   ],
 );
