@@ -8,7 +8,7 @@ import 'package:taller_nav/views/paso_parametros/paso_parametros_screen.dart';
 import 'package:taller_nav/views/grid_tab_view.dart';
 import 'package:taller_nav/views/lista_estudiantes/lista_estudiantes_screen.dart';
 import 'package:taller_nav/views/isolate/isolate_view.dart';
-//import 'package:taller_nav/views/timer/timer_view.dart';
+import 'package:taller_nav/views/chuck/chuck_norris_view.dart';
 
 final GoRouter appRouter = GoRouter(
   routes: [
@@ -33,13 +33,16 @@ final GoRouter appRouter = GoRouter(
       path: '/grid_tab',
       builder: (context, state) => const GridTabView(),
     ),
-
     GoRoute(
       path: '/lista_estudiantes',
       builder: (context, state) => const ListaEstudiantesScreen(),
     ),
     GoRoute(path: '/timer', builder: (context, state) => const TimerView()),
-
     GoRoute(path: '/isolate', builder: (context, state) => const IsolateView()),
+
+    GoRoute(
+      path: '/chuck',
+      builder: (context, state) => const ChuckNorrisView(),
+    ),
   ],
 );

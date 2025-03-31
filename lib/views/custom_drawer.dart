@@ -60,10 +60,18 @@ class CustomDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Icon(Icons.school), //
+            leading: const Icon(Icons.school),
             title: const Text('Lista de Estudiantes'),
             onTap: () {
-              context.go('/lista_estudiantes'); //
+              context.go('/lista_estudiantes');
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.mood),
+            title: const Text('Chuck Norris Jokes'),
+            onTap: () {
+              context.go('/chuck');
               Navigator.pop(context);
             },
           ),
