@@ -25,10 +25,19 @@ class CustomDrawer extends StatelessWidget {
             },
           ),
           ListTile(
+            leading: const Icon(Icons.store),
+            title: const Text('Establecimientos'),
+            onTap: () {
+              context.go('/establecimientos');
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
             leading: const Icon(Icons.timer),
             title: const Text('Timer'),
             onTap: () {
               context.go('/timer');
+              Navigator.pop(context);
             },
           ),
           ListTile(
@@ -36,6 +45,7 @@ class CustomDrawer extends StatelessWidget {
             title: const Text('Isolate'),
             onTap: () {
               context.go('/isolate');
+              Navigator.pop(context);
             },
           ),
           ListTile(
@@ -43,6 +53,7 @@ class CustomDrawer extends StatelessWidget {
             title: const Text('Paso de Parámetros'),
             onTap: () {
               context.go('/paso_parametros');
+              Navigator.pop(context);
             },
           ),
           ListTile(
@@ -50,6 +61,7 @@ class CustomDrawer extends StatelessWidget {
             title: const Text('Ciclo de Vida'),
             onTap: () {
               context.go('/ciclo_vida');
+              Navigator.pop(context);
             },
           ),
           ListTile(
@@ -57,6 +69,7 @@ class CustomDrawer extends StatelessWidget {
             title: const Text('GridView, TabBar y Lista'),
             onTap: () {
               context.go('/grid_tab');
+              Navigator.pop(context);
             },
           ),
           ListTile(
