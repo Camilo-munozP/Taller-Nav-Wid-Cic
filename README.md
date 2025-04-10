@@ -19,3 +19,12 @@
 - Uso de `FutureBuilder` para manejar estados de carga, éxito y error.  
 - Implementación de un `CircularProgressIndicator` para indicar carga.  
 - Manejo de errores con **mensajes amigables** en caso de fallos en la conexión.  
+
+## Taller 4: CRUD de Establecimientos  
+### Funcionalidades implementadas:  
+- **Listado de establecimientos** con `ListView.builder`.  
+- **Creación de nuevos establecimientos** mediante un formulario.  
+- **Edición de establecimientos existentes** con validaciones.  
+- **Eliminación de establecimientos** con confirmación previa.  
+- Uso de `ScaffoldMessenger` para mostrar mensajes de éxito o error.  
+- Se integró **registro** y **login** de usuarios.
