@@ -27,4 +27,4 @@
 - **Edición de establecimientos existentes** con validaciones.  
 - **Eliminación de establecimientos** con confirmación previa.  
 - Uso de `ScaffoldMessenger` para mostrar mensajes de éxito o error.  
-- Se integró [registro] y [login] de usuarios.
+- Se integró **registro** y **login** de usuarios.
