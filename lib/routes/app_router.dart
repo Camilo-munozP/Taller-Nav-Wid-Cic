@@ -15,6 +15,7 @@ import 'package:taller_nav/views/establecimientos/establecimiento_edit_view.dart
 import 'package:taller_nav/views/auth/login_page.dart';
 import 'package:taller_nav/views/auth/register_page.dart';
 import 'package:taller_nav/views/profile_view.dart';
+import 'package:taller_nav/views/provider/change_theme_view.dart';
 
 final GoRouter appRouter = GoRouter(
   routes: [
@@ -81,6 +82,11 @@ final GoRouter appRouter = GoRouter(
       path: '/register',
       name: 'register',
       builder: (context, state) => const RegisterPage(),
+    ),
+    GoRoute(
+      path: '/cambiar_tema',
+      name: 'cambiar_tema',
+      builder: (context, state) => const ChangeThemeView(),
     ),
   ],
 );
