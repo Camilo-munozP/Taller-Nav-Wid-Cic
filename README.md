@@ -27,4 +27,11 @@
 - **Edición de establecimientos existentes** con validaciones.  
 - **Eliminación de establecimientos** con confirmación previa.  
 - Uso de `ScaffoldMessenger` para mostrar mensajes de éxito o error.  
-- Se integró **registro** y **login** de usuarios.
+- Se integró **registro** y **login** de usuarios.  
+
+## Taller 5: Cambio de Tema (Claro/Oscuro y Color Primario)  
+### Funcionalidades implementadas:  
+- Implementación de un **`ThemeProvider`** usando `ChangeNotifier` y `Provider`.  
+- Permite al usuario **cambiar entre tema claro y oscuro** mediante un `Switch`.  
+- Los valores de tema y color se **persisten con `SharedPreferences`**.  
+

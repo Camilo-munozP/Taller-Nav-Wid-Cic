@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:taller_nav/provider/theme_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:taller_nav/provider/theme_provider.dart';
 
 class ChangeThemeView extends StatelessWidget {
   const ChangeThemeView({super.key});
@@ -11,7 +11,7 @@ class ChangeThemeView extends StatelessWidget {
     final currentColor = themeProvider.color;
 
     final List<Color> availableColors = [
-      const Color.fromARGB(255, 20, 83, 165), // Azul por defecto
+      const Color.fromARGB(255, 20, 83, 165),
       Colors.red,
       Colors.green,
       Colors.purple,
@@ -20,34 +20,49 @@ class ChangeThemeView extends StatelessWidget {
     ];
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Cambiar color del tema')),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: GridView.count(
-          crossAxisCount: 3,
-          children:
-              availableColors.map((color) {
-                return GestureDetector(
-                  onTap: () {
-                    themeProvider.setColor(color);
-                  },
-                  child: Container(
-                    margin: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: color,
-                      border: Border.all(
-                        color:
-                            currentColor == color
-                                ? Colors.black
-                                : Colors.transparent,
-                        width: 4,
+      appBar: AppBar(title: const Text('Cambiar tema')),
+      body: Column(
+        children: [
+          SwitchListTile(
+            title: const Text('Modo oscuro'),
+            value: themeProvider.themeMode == ThemeMode.dark,
+            onChanged: (value) {
+              themeProvider.toggleTheme(value);
+            },
+          ),
+          const Divider(),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text('Color principal del tema'),
+          ),
+          Expanded(
+            child: GridView.count(
+              crossAxisCount: 3,
+              children:
+                  availableColors.map((color) {
+                    return GestureDetector(
+                      onTap: () {
+                        themeProvider.setColor(color);
+                      },
+                      child: Container(
+                        margin: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: color,
+                          border: Border.all(
+                            color:
+                                currentColor == color
+                                    ? Colors.black
+                                    : Colors.transparent,
+                            width: 4,
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                );
-              }).toList(),
-        ),
+                    );
+                  }).toList(),
+            ),
+          ),
+        ],
       ),
     );
   }
